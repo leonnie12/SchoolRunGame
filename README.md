@@ -23,6 +23,8 @@ Piranhas are quick and agile homing predators that follow your school around lik
 Sharks are slower and larger predators that roam across the map. Not fully finished, but the plan is to have them knock back and stun the fish that run into the body, and if you go near its mouth it can eat your fish. 
 Jellyfish are another predator that I have not fully finished yet. It will send pulsing electric waves around itself that shock and kill fish. 
 
+screenshots: 
 
 
+<img width="1864" height="1102" alt="image" src="https://github.com/user-attachments/assets/8f066ef8-4ba9-4c70-b015-42eb1c9596c5" />
 

@@ -284,10 +284,10 @@ public class SchoolRun extends Canvas implements MouseListener, MouseMotionListe
         }
         for(Shark shark: sharks) {
             drawEntity(g2d, shark.sharkAnimation, shark.x, shark.y-100, shark.speedX, 0.14, 0);
-            //g2d.setColor(Color.GRAY);
-            //g2d.fillRect((int)shark.x-camX, (int)shark.y-camY, shark.width, shark.height);
-            //g2d.setColor(Color.GREEN);
-            //g2d.drawOval((int)shark.sharkMouthX-camX-shark.biteRange, (int)shark.sharkMouthY-camY-shark.biteRange, shark.biteRange*2, shark.biteRange*2);
+            g2d.setColor(Color.GRAY);
+            g2d.fillRect((int)shark.x-camX, (int)shark.y-camY, shark.width, shark.height);
+            g2d.setColor(Color.GREEN);
+            g2d.drawOval((int)shark.sharkMouthX-camX-shark.biteRange, (int)shark.sharkMouthY-camY-shark.biteRange, shark.biteRange*2, shark.biteRange*2);
         }
         for(Jellyfish jellyfish: jellyfish) {
             g2d.setColor(Color.PINK);
@@ -385,11 +385,9 @@ public class SchoolRun extends Canvas implements MouseListener, MouseMotionListe
                     fish.speedX += (dx / distance) * pull;
                     fish.speedY += (dy / distance) * pull;
 
-                    // Momentum sharing: follow the leader's velocity
                     fish.speedX += leader.speedX * 0.15;
                     fish.speedY += leader.speedY * 0.15;
 
-                    // Tight push away to prevent overlapping with leader
                     if (distance < 100) {
                         fish.speedX -= (dx / distance);
                         fish.speedY -= (dy / distance);
